@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>type conversions</title>
+</head>
+
+
+<script>
+    document.write("" + 1 + 0 + "<br>"); //The addition with a string "" + 1 converts 1 to a string: "" + 1 = "1", and then we have "1" + 0, the same rule is applied.
+    document.write("" - 1 + 0 + "<br>"); //The subtraction - (like most math operations) only works with numbers, it converts an empty string "" to 0.
+    document.write(true + false + "<br>");
+    document.write(6 / "3" + "<br>");
+    document.write("2" * "3" + "<br>");
+    document.write(4 + 5 + "px" + "<br>");
+    document.write("$" + 4 + 5 + "<br>");
+    document.write("4" - 2 + "<br>");
+    document.write("4px" - 2 + "<br>");
+    document.write("  -9  " + 5 + "<br>"); //The addition with a string appends the number 5 to the string.
+    document.write("  -9  " - 5 + "<br>"); //The subtraction always converts to numbers, so it makes " -9 " a number -9 (ignoring spaces around it).
+    document.write(null + 1 + "<br>"); //null becomes 0 after the numeric conversion.
+    document.write(undefined + 1 + "<br>"); //undefined becomes NaN after the numeric conversion.
+    document.write(" \t \n" - 2 + "<br>") //(Space characters, are trimmed off string start and end when a string is converted to a number.
+    // Here the whole string consists of space characters, such as \t, \n and a “regular” space between them. So, similarly to an empty string, it becomes 0.)
+</script>
+
+</html>
