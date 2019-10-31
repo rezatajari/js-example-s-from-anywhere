@@ -1,0 +1,123 @@
+.p1 {
+    color: black;
+    background-color: red;
+    height: 180px;
+    width: 250px;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-justify: auto;
+    border-radius: 12px;
+}
+
+.btn1 {
+    color: chartreuse;
+    background-color: black;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    margin-inline-end: 1em;
+    font-weight: bolder;
+    border-radius: 12px;
+    float: left;
+    margin-top: -4em;
+    margin-left: 4px;
+}
+
+.btn2 {
+    color: chartreuse;
+    background-color: black;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 12px;
+    float: left;
+    margin-top: -4em;
+    margin-left: 6.1em;
+}
+
+.p2 {
+    color: forestgreen;
+    background-color: lightblue;
+    height: 180px;
+    width: 250px;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-justify: auto;
+    border-radius: 12px;
+    margin-left: 8em;
+    position: absolute;
+    margin-top: -211px;
+}
+
+.btn3 {
+    color: chartreuse;
+    background-color: black;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    margin-inline-end: 1em;
+    font-weight: bolder;
+    border-radius: 12px;
+    position: absolute;
+    margin-top: -4em;
+    margin-left: 14.5em;
+}
+
+.btn4 {
+    color: chartreuse;
+    background-color: black;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 12px;
+    position: absolute;
+    margin-top: -4em;
+    margin-left: 20.3em;
+}
+
+.p3 {
+    color: lightyellow;
+    background-color: brown;
+    height: 180px;
+    width: 250px;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-justify: auto;
+    border-radius: 12px;
+    margin-left: 16em;
+    margin-top: -211px;
+    position: absolute;
+}
+
+.btn5 {
+    color: chartreuse;
+    background-color: black;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 12px;
+    margin-top: -4em;
+    margin-left: 28.7em;
+    position: absolute;
+}
+
+.btn6 {
+    color: chartreuse;
+    background-color: black;
+    font-size: large;
+    height: auto;
+    width: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 12px;
+    margin-top: -4em;
+    margin-left: 34.5em;
+    position: absolute;
+}
