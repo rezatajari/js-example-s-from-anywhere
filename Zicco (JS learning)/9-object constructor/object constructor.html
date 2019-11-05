@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>object constructor</title>
+</head>
+
+<body>
+    <p>javascript</p>
+</body>
+<script>
+    function phone(brand, model, waranty, color) {
+        this.brand = brand;
+        this.model = model;
+        this.waranty = waranty;
+        this.color = color;
+        this.extrawaranty = function(x) {
+            this.waranty = this.waranty + x;
+        }
+    }
+
+    var myphone = new phone('samsung', 'galexy', 12, 'black');
+    console.log(myphone);
+    myphone.extrawaranty(12);
+    console.log(myphone);
+    /*var test=new phone('lg','k10',6,'white');
+    test.ram=8;
+    test.extrawaranty(3);
+    console.log(test);
+    phone.prototype.ram1=99;
+    var pi=new phone('s','k',2,'f');
+    console.log(pi.ram1);               */
+</script>
+
+</html>
