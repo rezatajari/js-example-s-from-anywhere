@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>class</title>
+</head>
+
+<body>
+    <p>javascript</p>
+</body>
+<script>
+    class phone {
+        constructor(brand, model, waranty, color) {
+            this.brand = brand;
+            this.model = model;
+            this.waranty = waranty;
+            this.color = color;
+        }
+        extra(x) {
+            this.waranty = this.waranty + x;
+        }
+    }
+    var myphone = new phone('samsung', 'galexy', 12, 'black');
+    myphone.extra(12);
+    console.log(myphone);
+</script>
+
+</html>
