@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>events</title>
+</head>
+
+<link rel="stylesheet" href="events.css">
+
+<body onload="loadBody()">
+    <h1><a href="https://toplearn.com">TopLearn.Com</a></h1>
+
+    <button onclick="this.innerHTML='oops 1'">Click Me !</button>
+
+    <h1 onclick="changeText(this)">Click Me 2 !</h1>
+    <h1 onclick="changeText(this)">Click Me 3 !</h1>
+    <button onclick="displayDate()">The Time Is ?</button>
+    <p id="demo"></p>
+    <button id="myBtn">Iman Button</button>
+    <br/> Name Is : <input type="text" id="fname" onchange="myFunction()" /><br/>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" class="events">Mouse over Me</div>
+</body>
+
+<script src="events.js"></script>
+
+</html>
