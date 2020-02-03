@@ -23,8 +23,12 @@ startCounter.addEventListener('click', function(e) {
     loadingMessage.style.display = 'block';
     successMessage.style.display = 'none';
 
-
+    let originalSecounds = secounds;
+    let lastPercent = 'p100';
+    timerCircle.classList.add(lastPercent);
     let timerId = setInterval(() => {
+        if (lastPercent) timerCircle.classList.remove(lastPercent);
+
         if (secounds <= 1) {
             clearInterval(timerId);
             startBox.classList.add('active');
@@ -32,8 +36,14 @@ startCounter.addEventListener('click', function(e) {
             loadingMessage.style.display = 'none';
             successMessage.style.display = 'block';
             inputCounter.value = '';
+            return;
         }
+
+
         secounds -= 1;
+        let percent = Math.abs(Math.floor((((originalSecounds - secounds) / originalSecounds) * 100) - 100));
+        lastPercent = `p${percent}`;
+        timerCircle.classList.add(`p${percent}`);
         timerNum.textContent = secounds;
     }, 1000)
 })
