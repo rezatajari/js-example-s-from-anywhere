@@ -5,7 +5,7 @@ let controls = playerArea.querySelector('.myplayer__controls');
 let play = controls.querySelector('.play');
 let rwd = controls.querySelector('.rewind');
 let fwd = controls.querySelector('.forward');
-//let fullscreen=controls.querySelector('.fullscreen');
+let fullscreen = controls.querySelector('.fullscreen');
 
 
 let volumeIcon = controls.querySelector('.volume .icon');
@@ -60,6 +60,34 @@ volumeProgressBarInput.addEventListener('click', function() {
     media.volume = this.value / 100;
     this.style = `background : linear-gradient(90deg, rgba(230,126,34,1) ${this.value}%, #e1e1e1 0%);`
 })
+
+
+fullscreen.addEventListener('click', function() {
+    console.log(document.fullscreenElement);
+    if (!document.fullscreenElement) {
+        if (playerArea.requestFullscreen) {
+            playerArea.requestFullscreen();
+        } else if (playerArea.mozFullScreenElement) {
+            playerArea.mozFullscreenElement();
+        } else if (playerArea.msFullscreenElement) {
+            playerArea.msFullscreenElement();
+        } else if (playerArea.webkitFullscreenElement) {
+            playerArea.webkitFullscreenElement();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullscreen) {
+            document.mozCancelFullscreen();
+        } else if (document.msCancelFullscreen) {
+            document.msCancelFullscreen();
+        } else if (document.webkitCancelFullscreen) {
+            document.webkitCancelFullscreen();
+        }
+    }
+
+})
+
 
 function togglePlayIcon() {
     let icon = play.querySelector('i');
