@@ -8,7 +8,13 @@ window.addEventListener('keydown', function(e) {
 
     const keyNote = key.getAttribute('data-note');
 
+    key.classList.add('playing');
     note.innerHTML = keyNote;
 
+    function removeTransition() {
+        key.classList.remove('playing')
+    }
 
-})
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+});
