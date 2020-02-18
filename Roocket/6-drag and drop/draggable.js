@@ -1,6 +1,11 @@
 class draggable {
     constructor(options) {
         this.setupList(options);
+
+        for (let listItem of options.el.children) {
+            this.addDnDHandlers(listItem);
+        }
+
     }
 
 
@@ -14,5 +19,40 @@ class draggable {
         if (typeof template !== "function") throw Error('please add a function as template');
 
         list.forEach(item => element.innerHTML += template(item))
+    }
+
+    addDnDHandlers(element) {
+        element.setAttribute('draggable', true);
+
+        element.addEventListener('dragstart', this.handleDragStart.bind(this));
+        element.addEventListener('drageneter', this.handleDragEneter.bind(this));
+        element.addEventListener('dragover', this.handleDragOver.bind(this));
+        element.addEventListener('dragLeave', this.handleDragLeave.bind(this));
+        element.addEventListener('drop', this.handleDragDrop.bind(this));
+        element.addEventListener('dragend', this.handleDragEnd.bind(this));
+    }
+
+    handleDragStart(e) {
+
+    }
+
+    handleDragEneter(e) {
+
+    }
+
+    handleDragOver(e) {
+
+    }
+
+    handleDragLeave(e) {
+
+    }
+
+    handleDragDrop(e) {
+
+    }
+
+    handleDragEnd(e) {
+
     }
 }
