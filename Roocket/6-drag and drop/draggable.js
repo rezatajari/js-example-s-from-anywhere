@@ -1,8 +1,13 @@
 class draggable {
     dragSrcEl;
+    list;
+    update;
 
     constructor(options) {
         this.setupList(options);
+        this.list = options.list;
+
+        if (options.update) this.update = options.update;
 
         for (let listItem of options.el.children) {
             this.addDnDHandlers(listItem);
@@ -69,5 +74,9 @@ class draggable {
 
     handleDragEnd(e) {
         e.target.classList.remove('dragElem');
+
+        let newList = [];
+        list.querySelectorAll('.list-item').forEach(elm => newList.push(this.list.find(item => elm.id == item.id)));
+        this.update(newList);
     }
 }

@@ -28,6 +28,6 @@ new draggable({
         `
     },
     update: (list) => {
-        console.log(list)
+        console.log('new List', list);
     }
 })
