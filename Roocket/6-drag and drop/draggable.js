@@ -1,4 +1,6 @@
 class draggable {
+    dragSrcEl;
+
     constructor(options) {
         this.setupList(options);
 
@@ -27,32 +29,45 @@ class draggable {
         element.addEventListener('dragstart', this.handleDragStart.bind(this));
         element.addEventListener('drageneter', this.handleDragEneter.bind(this));
         element.addEventListener('dragover', this.handleDragOver.bind(this));
-        element.addEventListener('dragLeave', this.handleDragLeave.bind(this));
+        element.addEventListener('dragleave', this.handleDragLeave.bind(this));
         element.addEventListener('drop', this.handleDragDrop.bind(this));
         element.addEventListener('dragend', this.handleDragEnd.bind(this));
     }
 
     handleDragStart(e) {
+        this.dragSrcEl = e.target;
 
+        e.dataTransfer.setData('text/html', e.target.outerHTML)
+
+        e.target.classList.add('dragElem')
     }
 
-    handleDragEneter(e) {
-
-    }
+    handleDragEneter(e) {}
 
     handleDragOver(e) {
+        if (e.preventDefault) e.preventDefault();
+
+        e.target.classList.add('over');
 
     }
 
     handleDragLeave(e) {
-
+        e.target.classList.remove('over');
     }
 
     handleDragDrop(e) {
+        let target = e.target.closest('.list-item');
 
+        if (this.dragSrcEl != target) {
+            target.parentNode.removeChild(this.dragSrcEl);
+            let dropHTML = e.dataTransfer.getData('text/html');
+            target.insertAdjacentHTML('beforebegin', dropHTML);
+            this.addDnDHandlers(target.previousSibling);
+        }
+        e.target.classList.remove('over');
     }
 
     handleDragEnd(e) {
-
+        e.target.classList.remove('dragElem');
     }
 }
