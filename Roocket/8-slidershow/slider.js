@@ -34,6 +34,7 @@ class slider {
 
     incrementSlide = () => this.showSlides(this.slideIndex += 1);
     decrementSlide = () => this.showSlides(this.slideIndex - +1);
+    currentSlide = n => this.showSlides(this.slideIndex = n);
 
     createDots() {
         let { el: sliderElement } = this.option;
@@ -47,11 +48,20 @@ class slider {
         sliderElement.after(dots);
 
         this.dots = dots.querySelectorAll('.dot');
-        this.dots.forEach(dot => dot.addEventListener('click', e => console.log(e)))
+        this.dots.forEach(dot => dot.addEventListener('click', e => this.currentSlide(parseInt(e.target.dataset.slide))))
     }
 
     showSlides(number) {
+        let { el: sliderElement, slideClass, currentSlider } = this.option;
         if (number > this.sliders.length) this.slideIndex = 1;
         if (number < 1) this.slideIndex = this.sliders.length;
+
+        sliderElement.querySelector(`.${slideClass}.active`).classList.remove('active');
+        this.dots.forEach(dot => dot.classList.remove('active'));
+
+        this.sliders[this.slideIndex - 1].classList.add('active');
+        this.dots[this.slideIndex - 1].classList.add('active');
+
+        if (currentSlider) currentSlider(this.sliders[this.slideIndex - 1]);
     }
 }
