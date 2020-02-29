@@ -9,6 +9,7 @@ class slider {
         this.createDots();
 
         this.showSlides(1);
+        this.setInterval();
     }
 
     intialStuff() {
@@ -28,13 +29,18 @@ class slider {
             <a class="prev">&#10094;</a>
         `);
 
-        sliderElement.querySelector('.next').addEventListener('click', () => this.incrementSlide());
-        sliderElement.querySelector('.prev').addEventListener('click', () => this.decrementSlide());
+        sliderElement.querySelector('.next').addEventListener('click', () => this.nextAndPrevSlide(this.slideIndex += 1));
+        sliderElement.querySelector('.prev').addEventListener('click', () => this.nextAndPrevSlide(this.slideIndex -= 1));
     }
 
-    incrementSlide = () => this.showSlides(this.slideIndex += 1);
-    decrementSlide = () => this.showSlides(this.slideIndex - +1);
-    currentSlide = n => this.showSlides(this.slideIndex = n);
+    nextAndPrevSlide = (n) => {
+        this.resetInterval();
+        this.showSlides(n);
+    }
+    currentSlide = n => {
+        this.resetInterval();
+        this.showSlides(this.slideIndex = n);
+    }
 
     createDots() {
         let { el: sliderElement } = this.option;
@@ -63,5 +69,16 @@ class slider {
         this.dots[this.slideIndex - 1].classList.add('active');
 
         if (currentSlider) currentSlider(this.sliders[this.slideIndex - 1]);
+    }
+
+    setInterval() {
+        if (this.auto != 0) {
+            this.intervalID = setInterval(() => this.showSlides(this.slideIndex += 1), this.auto);
+        }
+    }
+
+    resetInterval() {
+        clearInterval(this.intervalID);
+        this.setInterval();
     }
 }
