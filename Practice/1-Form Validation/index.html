@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+        label {
+            color: black;
+        }
+        
+        span {
+            color: red;
+        }
+        
+        div {
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <label>Frist Name: <input type="text" name="frist name" required></lable> <span></span> <br>
+            <label>Last Name:   <input type="text"    name="last name!" required></lable><span></span> <br>
+            <label>Email:   <input type="email"  name="email!" required>   </lable><span></span> <br>
+            <label>User Id: <input type="text"    name="user id!" required>    </lable><span></span> <br>
+            <label>Password:    <input type="password"    name="password!" required></lable><span></span> <br>
+            <label>Confirm Password:    <input type="password"    name="confirm password!" required></lable><span></span> <br>
+            <button id="submit" type="submit">Create</button>
+        </form>
+        
+   </div>
+</body>
+  <script src="script.js"></script>
+</html>
