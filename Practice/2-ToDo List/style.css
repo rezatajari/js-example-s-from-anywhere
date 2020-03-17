@@ -1,0 +1,68 @@
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+input {
+    font-size: large;
+    padding: 5px;
+    width: 25%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btnItem {
+    margin-top: 15px;
+    font-size: large;
+    padding: 5px;
+    width: fit-content;
+    font-family: serif;
+    font-weight: bold;
+    background-color: rgba(50, 62, 230, 0.74);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btnItem:hover {
+    background-color: rgba(0, 0, 255, 0.781);
+    transition: 0.5s;
+}
+
+.model-content {
+    border: 1px solid black;
+    display: block;
+    z-index: 1;
+    background-color: rgba(228, 213, 213, 0.726);
+    border-radius: 9px;
+    padding: 17px;
+    line-height: 30px;
+    width: 150%;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+.model-footer>button {
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(161, 134, 134);
+    font-weight: bold;
+    font-size: 15px;
+    font-family: serif;
+    padding: 0.5em;
+    margin-left: 80%;
+    cursor: pointer;
+    outline: none;
+    width: 5em;
+    margin-top: 7px;
+}
+
+.model-footer>button:hover {
+    transition: 1s;
+    background-color: springgreen;
+}
+
+.model-footer {
+    border-top: 1px solid black;
+}
