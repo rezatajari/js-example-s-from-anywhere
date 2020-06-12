@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notepad</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>دفترچه یادداشت با Local Storage</h1>
+                <p>(حافظه مرورگر)</p>
+                <span>-------------------</span>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form">
+                        <form action="#">
+                            <label for="textarea">یادداشت جدید بنویس:</label>
+                            <textarea name="notepad" id="textarea" cols="30" rows="3"></textarea>
+                            <button type="submit" id="btn_save" class="btn_save">ذخیره یادداشت</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="my_note">
+                        <h2>یادداشت های من</h2>
+                        <ul id="noteList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+<script src="script/main.js"></script>
+
+</html>

@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Vazir;
+    src: url('Vazir.ttf') format('truetype');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Vazir', sans-serif;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    padding: .5em 1em;
+}
+
+textarea,
+button,
+label {
+    font-family: inherit;
+}
+
+.container {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    padding: 2em;
+}
+
+.title p,
+.title span {
+    font-size: 3em;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    align-items: baseline;
+}
+
+.col {
+    width: 50%;
+    padding: 1em;
+}
+
+.form {}
+
+.form label {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 900;
+}
+
+.btn_save {
+    width: 100%;
+    border: none;
+    background-color: cyan;
+    padding: .5em 0;
+    outline: none;
+    opacity: 0.6;
+    font-weight: 900;
+}
+
+.btn_save:hover {
+    opacity: 1;
+    box-shadow: 0 0 3px black;
+    transition: .3s ease-in-out;
+}
+
+.my_note {}
+
+.my_note li {
+    margin-bottom: 1em;
+}
+
+.close_note {
+    float: left;
+    cursor: pointer;
+    color: red;
+    font-weight: 900;
+    font-size: 1.3em;
+}
