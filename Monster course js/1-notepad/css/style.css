@@ -73,10 +73,11 @@ label {
     font-weight: 900;
 }
 
-.btn_save:hover {
+.btn_save:hover,
+.btn_save:focus {
     opacity: 1;
     box-shadow: 0 0 3px black;
-    transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
 }
 
 .my_note {}
