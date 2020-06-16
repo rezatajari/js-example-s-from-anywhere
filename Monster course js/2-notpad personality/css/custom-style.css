@@ -58,3 +58,16 @@
     a:hover {
         text-shadow: 0 0 10px var(--danger);
     }
+    
+    .frist_time_hide {
+        display: none;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    .hide {
+        opacity: 0;
+        transition: ease-out 1s opacity;
+    }
