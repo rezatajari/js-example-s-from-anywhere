@@ -1,0 +1,60 @@
+    @font-face {
+        font-family: Vazir;
+        src: url('Vazir.ttf') format('truetype');
+    }
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    body {
+        font-family: 'Vazir'
+    }
+    
+    main {
+        background-color: darkgray;
+    }
+    
+    #textarea {
+        resize: none;
+        outline: none;
+        border: 1px solid var(--dark);
+        background-color: darkgray;
+        transition: .2s background-color ease-out;
+    }
+    
+    #textarea:focus {
+        background-color: #fff;
+    }
+    
+    .table,
+    th,
+    td {
+        border: 2px solid var(--dark);
+    }
+    
+    .row_width {
+        width: 10%;
+    }
+    
+    tbody tr:nth-child(odd) {
+        background-color: var(--success);
+        color: var(--light);
+    }
+    
+    .closebtn {
+        color: var(--danger) !important;
+        cursor: pointer;
+        font-weight: 900;
+        float: left;
+    }
+    
+    a:hover {
+        text-shadow: 0 0 10px var(--danger);
+    }
