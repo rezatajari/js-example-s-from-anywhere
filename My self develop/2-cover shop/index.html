@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cover shop</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <header class="bg-danger">
+        <nav class="navbar justify-content-center container">
+            <div class="logo d-flex align-items-baseline">
+                <a href="#"><img class="rounded-lg" src="images/cover-logo-png.png" width="80px" alt="logo"></a>
+                <p class="lead px-2">سبد خریدار</p>
+                <table class="text-center buy_list table-bordered">
+                    <thead>
+                        <th class="p-2">کاور فیلم</th>
+                        <th class="p-2">عنوان فیلم</th>
+                        <th class="p-2">سال ساخت</th>
+                        <th class="p-2">قیمت</th>
+                        <th class="p-2">حذف</th>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+            <ul class="nav justify-content-around">
+                <a class="btn btn-dark rounded-lg" href="#">خانه</a>
+                <a class="btn btn-dark rounded-lg" href="#">درخواست کاور</a>
+                <a class="btn btn-dark rounded-lg" href="#">تماس با ما</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container py-4">
+            <!-- row 1 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/irrational man 2015.jpg" alt="irrational man 2015">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">irrational man</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2015</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="1" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/knight of cups 2015.jpg" alt="knight of cups 2015">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">knight of cups</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2015</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="2" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/redeemer 2014.jpg" alt="redeemer 2014">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">redeemer</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2014</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="3" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+            </div>
+            <!-- row 2 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/the squad 2015.jpg" alt="irrational man 2015">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">the squad</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2015</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="4" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/irrational man 2015.jpg" alt="irrational man 2015">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">irrational man</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2015</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="5" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/irrational man 2015.jpg" alt="irrational man 2015">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">irrational man</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2015</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="6" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+            </div>
+            <!-- row 3 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/knight of cups 2015.jpg" alt="knight of cups 2015">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">knight of cups</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2015</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="7" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/redeemer 2014.jpg" alt="redeemer 2014">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">redeemer</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2014</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="8" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <figure class="card bg-danger text-center">
+                        <img class="card-img-top" src="images/the squad 2015.jpg" alt="irrational man 2015">
+                        <div class="card-body bg-info">
+                            <small class="text-warning">عنوان فیلم</small>
+                            <h4 class="film_title">the squad</h4>
+                            <small class="text-warning">سال ساخت</small>
+                            <h5 class="film_year">2015</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-warning">قیمت کاور</small>
+                            <h5 class="film_price mt-2">50,000 هزار ریال</h5>
+                        </div>
+                        <button data-id="9" class="btn_buy film_id btn btn-warning py-3">خرید</button>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-light font-weight-bold bg-danger text-center py-3">
+        <ul class="nav p-0 justify-content-center">
+            <li class="px-2">Javascript</li>
+            <li class="px-2">Bootstrap4</li>
+            <li class="px-2">Css3</li>
+            <li class="px-2">Html5</li>
+            <li class="px-2">:Create by</li>
+        </ul>
+        <small class="text-warning">Design by Reza</small>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+
+</html>

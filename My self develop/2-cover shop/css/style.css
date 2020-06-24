@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Iran Sans';
+    src: url(../font/Iranian\ Sans.ttf);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Iran Sans';
+    font-size: 1.2em;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.tbody tr td {
+    padding: 2em;
+}
+
+.logo {
+    width: 25%;
+}
+
+.buy_list {
+    display: none;
+}
+
+.buy_list {
+    background-color: #1d1d1d;
+    position: absolute;
+    top: 76%;
+    z-index: 1;
+}
+
+.logo:hover .buy_list {
+    display: block;
+}
+
+.container ul {
+    width: 75%;
+}
+
+.card {
+    border: none;
+}
+
+@media(min-width:48em) {
+    .card img {
+        height: 400px;
+    }
+}
+
+.card .btn {
+    border-radius: 0;
+}
+
+.card .btn:hover {
+    background-color: #fff200;
+}
