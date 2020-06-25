@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Iran Sans';
+    src: url(../font/Iranian\ Sans.ttf);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #303960;
+    color: #a7d129;
+    font-family: 'Iran Sans';
+}
+
+.form {
+    position: relative;
+    background-color: #1d1d1d;
+    border-radius: 3px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20em;
+    margin: 25vh auto 0;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.input_box:first-child {
+    margin-top: 0;
+}
+
+#email,
+#password,
+#message {
+    margin-top: 1em;
+    padding: .5em;
+    border-radius: 5px;
+    border: 1px solid #303960;
+    outline: none;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+#email:focus,
+#password:focus,
+#message:focus {
+    border-color: #147;
+    background-color: hsla(75, 67%, 49%, .9);
+    transition: .4s ease-out;
+}
+
+#message {
+    resize: none;
+    margin-top: 1.5em;
+}
+
+.btn_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.btn_box img {
+    margin-right: .8em;
+}
+
+.sendBtn,
+.resetBtn {
+    border: none;
+    padding: 0.4em 1.5em;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    box-shadow: 1px 1px 1px 1px #303960;
+}
+
+.sendBtn {
+    background-color: hsla(75, 67%, 49%, .8);
+    transition: .3s ease-in-out;
+}
+
+.sendBtn:hover {
+    background-color: lawngreen;
+    color: #1d1d1d;
+}
+
+.sendBtn:disabled {
+    pointer-events: none;
+    background-color: #1d1d1d !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #9F9F9F !important;
+    cursor: default;
+    border: 1px solid #147;
+}
+
+.resetBtn {
+    background-color: #137;
+    transition: .3s ease-in-out;
+}
+
+.resetBtn:hover {
+    background-color: cyan;
+    color: #1d1d1d;
+}
+
+.success_send {
+    position: absolute;
+    z-index: 1;
+    background-color: red;
+    border-radius: 5px;
+    width: 20%;
+    height: fit-content;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+.success_send img {
+    position: absolute;
+    width: 100%
+}
