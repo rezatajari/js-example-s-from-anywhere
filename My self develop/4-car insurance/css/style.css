@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Iran Sans';
+    src: url(../font/Iranian\ Sans.ttf);
+}
+
+body {
+    font-family: 'Iran Sans';
+    font-weight: 700;
+    background-color: #001f3f;
+    color: #01FF70;
+}
+
+.out_con {
+    height: 100vh;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.hilight_cover img {
+    height: 300px;
+    width: 300px;
+}
+
+.hilight_cover::before {
+    content: attr(data-before);
+    text-align: center;
+    color: #01FF70;
+    line-height: 4.5;
+    font-size: 3.5em;
+    background-color: #147;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    transform: translateY(-100%);
+    transition: ease-in-out .2s;
+}
+
+.card:hover .hilight_cover::before {
+    background-color: #1d1d1d;
+    transform: translateY(0%);
+}
+
+.custom-control-label::before {
+    right: 107%;
+}
